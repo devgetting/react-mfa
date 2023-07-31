@@ -1,0 +1,25 @@
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+.left-panel,
+.right-panel {
+    width: 50%;
+    height: 100vh;
+    padding: 0;
+}
+
+.left-panel {
+    background-color: #F0F0F0;
+    flex-flow: column wrap;
+}
+
+.left-panel img {
+    width: 40%;
+    display: block;
+}
+
+.right-panel .form-content {
+    height: 100%;
+}

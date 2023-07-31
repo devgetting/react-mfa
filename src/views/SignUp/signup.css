@@ -1,0 +1,25 @@
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+.sign-up-left-panel,
+.sign-up-right-panel {
+    width: 50%;
+    height: 100vh;
+    padding: 0;
+}
+
+.sign-up-right-panel {
+    background-color: #F0F0F0;
+    flex-flow: column wrap;
+}
+
+.sign-up-right-panel img {
+    width: 40%;
+    display: block;
+}
+
+.sign-up-left-panel .form-content {
+    height: 100%;
+}

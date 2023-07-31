@@ -1,0 +1,52 @@
+.card {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--dark);
+    padding: 40px;
+    color: var(--white);
+}
+
+.card p,
+.card span,
+.card small,
+.card strong {
+    color: var(--white);
+}
+
+.card.light {
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid rgb(238, 238, 238);
+    font-size: 14px;
+}
+
+.card.light p,
+.card.light span,
+.card.light small,
+.card.light strong {
+    color: var(--dark);
+}
+
+.card .card-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    margin-bottom: 10px;
+}
+
+.card .card-footer {
+    padding-top: 10px;
+    border-top: 1px solid rgb(255, 255, 255);
+    margin-top: 10px;
+    color: var(--white);
+}
+
+.card.light .card-header {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    color: var(--dark);
+}
+
+.card.light .card-footer {
+    border-top: 1px solid rgb(238, 238, 238);
+    color: var(--dark);
+
+}

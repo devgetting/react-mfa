@@ -1,0 +1,75 @@
+.top-banner {
+    width: 100%;
+    text-align: center;
+    background-color: var(--dark);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px 0;
+}
+
+header {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    background-color: #fff;
+}
+
+header h3 {
+    display: flex;
+    align-items: center;
+}
+
+header h3 span.icon {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 6px 8px;
+    font-size: 14px;
+    background-color: var(--light);
+    color: var(--white);
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header ul li {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+header ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+header ul li.notif-bell {
+    position: relative;
+}
+
+header ul li.notif-bell span.warning {
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    background-color: red;
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    top: 10px;
+    right: 8px;
+}
+
+header ul li.user-icon {
+    background-color: var(--dark);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+header ul li.user-icon span {
+    color: var(--white);
+}

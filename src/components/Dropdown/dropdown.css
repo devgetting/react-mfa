@@ -1,0 +1,23 @@
+ul.dropdown {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 10px;
+    position: absolute;
+    top: calc(100% + 10px);
+    z-index: 10;
+}
+
+ul.dropdown li {
+    all: revert;
+    position: relative;
+    padding: 10px;
+    border-top: 1px solid rgb(238, 238, 238);
+}
+
+ul.dropdown li:hover {
+    all: revert;
+    border-top: 1px solid rgb(238, 238, 238);
+    background-color: rgb(238, 238, 238);
+    padding: 10px;
+}

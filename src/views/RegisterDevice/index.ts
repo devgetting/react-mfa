@@ -1,0 +1,1 @@
+export { default as RegisterDevice } from './RegisterDevice';
