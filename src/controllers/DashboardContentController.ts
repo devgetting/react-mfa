@@ -6,7 +6,7 @@ import { DashboardListener } from "listeners/DashboardListener";
 export class DashboardContentController {
     @Receiver(DashboardContext)
     private dashboardContext: DashboardContext;
-    public repeated = 0;
+
     private removeNotifications: any;
 
     constructor() {

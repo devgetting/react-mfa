@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const SRC = path.join(__dirname, 'src');
+const NODE_MODULES = path.join(__dirname, 'node_modules');
 const BUILD = path.join(__dirname, 'build')
 const html = path.join(SRC, 'index.dev.html')
 const entry = path.join(SRC, 'index.tsx');
@@ -39,7 +40,7 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        modules: [SRC, 'node_modules']
+        modules: [SRC, NODE_MODULES]
     },
     plugins: [
         new HtmlWebpackPlugin({

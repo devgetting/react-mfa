@@ -6,9 +6,7 @@ import { LoginController } from 'controllers/LoginController';
 import { observer } from '@devgetting/react-init';
 import { useNavigate } from 'react-router-dom';
 
-const controller = new LoginController();
-
-export default observer(controller, function() {
+export default observer(LoginController, function({ controller }) {
     const navigate = useNavigate();
 
     return (

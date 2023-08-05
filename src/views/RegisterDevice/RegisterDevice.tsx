@@ -5,9 +5,7 @@ import { TextField } from 'components/TextField';
 import { RegisterDeviceController } from 'controllers/RegisterDeviceController';
 import React from 'react';
 
-const controller = new RegisterDeviceController();
-
-export default observer(controller, function() {
+export default observer(RegisterDeviceController, function({ controller }) {
     const actions = {
         onToggleRegisterDeviceCard: (e: React.MouseEvent<HTMLButtonElement>) => {
             e.preventDefault();

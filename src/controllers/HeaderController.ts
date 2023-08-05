@@ -1,4 +1,4 @@
-import { Controller, Receiver, Routing, action, notify, routing } from "@devgetting/react-init";
+import { Controller, Receiver, action } from "@devgetting/react-init";
 import { DashboardContext } from "Contexts/DashboardContext";
 import { DashboardListener } from "listeners/DashboardListener";
 
@@ -7,9 +7,6 @@ export class HeaderController {
     @Receiver(DashboardContext)
     private dashboardContext: DashboardContext;
 
-    @routing
-    private history: Routing;
-    
     public showNotification = false; 
 
     constructor() {}
@@ -30,6 +27,5 @@ export class HeaderController {
 
     public goToNotification(fingerprint: string) {
         this.showNotification = false;
-        this.history.redirect('/notification');
     }
 }

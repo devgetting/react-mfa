@@ -6,9 +6,7 @@ import { SignUpController } from 'controllers/SignUpController';
 import { observer } from '@devgetting/react-init';
 import { useNavigate } from 'react-router-dom';
 
-const controller = new SignUpController();
-
-export default observer(controller, function() {
+export default observer(SignUpController, function() {
     const navigate = useNavigate();
 
     return (

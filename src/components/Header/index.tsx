@@ -1,15 +1,15 @@
-import { observer } from '@devgetting/react-init';
 import './header.css';
+import React from "react";
+import { observer } from "@devgetting/react-init";
 import { HeaderController } from "controllers/HeaderController";
 import { BellIcon } from "icons";
-import React from "react";
 import { Dropdown } from 'components/Dropdown';
+import { useNavigate } from 'react-router-dom';
 
-const controller = new HeaderController();
 
-console.log(controller);
+export const Header = observer(HeaderController, ({ controller }) => {
+const navigate = useNavigate();
 
-const Component = () => {
     const actions = {
         handleShowNotifications: () => {
             controller.setShowNotification(!controller.showNotification);
@@ -18,6 +18,7 @@ const Component = () => {
             e.stopPropagation();
 
             controller.goToNotification('');
+            navigate('/notification')
         }
     }
 
@@ -61,6 +62,4 @@ const Component = () => {
             </header>
         </>
     )
-};
-
-export const Header = observer(controller, Component);
+});

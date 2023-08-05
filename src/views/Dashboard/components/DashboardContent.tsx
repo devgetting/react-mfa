@@ -5,10 +5,7 @@ import { Toast } from 'components/Toast';
 import { Button } from 'components/Button';
 import { DashboardContentController } from 'controllers/DashboardContentController';
 
-
-const controller = new DashboardContentController();
-
-const Component = () => {
+export const DashboardContent = observer(DashboardContentController, ({ controller }) => {
     const actions = {
         addNotification: () => controller.addNotification()
     }
@@ -98,6 +95,4 @@ const Component = () => {
             <Toast>{ notificationCard }</Toast>
         </>
     )
-}
-
-export const DashboardContent = observer(controller, Component);
+});
