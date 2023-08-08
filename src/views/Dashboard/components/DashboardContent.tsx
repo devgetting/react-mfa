@@ -1,7 +1,6 @@
 import { observer } from '@devgetting/react-init';
 import React from 'react';
 import { Card } from 'components/Card';
-import { Toast } from 'components/Toast';
 import { Button } from 'components/Button';
 import { DashboardContentController } from 'controllers/DashboardContentController';
 
