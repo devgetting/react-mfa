@@ -5,6 +5,8 @@ import { HeaderController } from "controllers/HeaderController";
 import { BellIcon } from "icons";
 import { Dropdown } from 'components/Dropdown';
 import { useNavigate } from 'react-router-dom';
+import { Card } from 'components/Card';
+import { Button } from 'components/Button';
 
 
 export const Header = observer(HeaderController, ({ controller }) => {
@@ -24,6 +26,32 @@ const navigate = useNavigate();
 
     const { handleShowNotifications, handleGoToNotification } = actions;
 
+    const footerCard = (
+        <div className="row">
+            <div className="col-md-6">
+                <Button>Permitir</Button>
+            </div>
+            <div className="col-md-6">
+                <Button buttonType="outline-dark">Bloquear</Button>
+            </div>
+        </div>
+    ) 
+
+    const notificationCard = controller.notifications.map((notification, index) => {
+        const header = <h3>{ notification.title }</h3>
+        const body = <p>{ notification.body }</p>
+
+        return (
+            <li key={index}>
+                <Card 
+                    cardType="light"
+                    header={header}
+                    footer={footerCard}
+                    body={body} />
+            </li>
+        )
+    });
+
     return (
         <>
             <div className="top-banner">Bienvenidos a nuestro dashboard en tiempo real</div>
@@ -40,17 +68,9 @@ const navigate = useNavigate();
                                 onClick={handleShowNotifications}
                             >
                                 <BellIcon width={15} />
-                                { controller.serverNotifications.length > 0 && <span className="warning" /> }
+                                { controller.notifications.length > 0 && <span className="warning" /> }
                                 { controller.showNotification && (<Dropdown>
-                                    <li onClick={handleGoToNotification}>
-                                        <h4>Welcome back</h4>
-                                        <small>un nuevo dispositivo</small>
-                                    </li>
-
-                                    <li onClick={handleGoToNotification}>
-                                        <h4>Welcome back</h4>
-                                        <small>un nuevo dispositivo</small>
-                                    </li>
+                                    { notificationCard }
                                 </Dropdown>) }
                             </li>
                             <li className="d-flex user-icon justify-content-center align-items-center">

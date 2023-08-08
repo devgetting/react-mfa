@@ -11,8 +11,8 @@ export class HeaderController {
 
     constructor() {}
 
-    get serverNotifications() {
-        return this.dashboardContext.serverNotifications;
+    get notifications() {
+        return this.dashboardContext.notifications;
     }
 
     get websocket() {

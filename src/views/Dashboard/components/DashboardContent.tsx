@@ -20,32 +20,6 @@ export const DashboardContent = observer(DashboardContentController, ({ controll
         <h3>New feed</h3>
     );
 
-    const footerCard = (
-        <div className="row">
-            <div className="col-md-6">
-                <Button>Permitir</Button>
-            </div>
-            <div className="col-md-6">
-                <Button buttonType="outline-dark">Bloquear</Button>
-            </div>
-        </div>
-    ) 
-
-    const notificationCard = controller.notifications.map((notification, index) => {
-        const header = <h3>{ notification.title }</h3>
-        const body = <p>{ notification.body }</p>
-
-        return (
-            <div className="mb-3" key={index}>
-                <Card 
-                    cardType="light"
-                    header={header}
-                    footer={footerCard}
-                    body={body} />
-            </div>
-        )
-    });
-
     return (
         <>
             <section className="dashboard-content">
@@ -92,7 +66,6 @@ export const DashboardContent = observer(DashboardContentController, ({ controll
                     </div>
                 </div>
             </div>
-            <Toast>{ notificationCard }</Toast>
         </>
     )
 });
